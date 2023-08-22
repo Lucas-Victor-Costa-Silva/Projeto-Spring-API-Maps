@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Insert title here</title>
+</head>
+<body>
+    <div th:fragment="messageBlock" class="alert alert-dismissible fade show" role="alert"
+         th:if="${not #strings.isEmpty(mensagem)}"
+         th:style="'background-color: #FFC107; color: #fff; border-color: #FFC107;'">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+        <span th:text="${mensagem}"></span>
+    </div>
+</body>
+</html>
